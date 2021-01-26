@@ -2,6 +2,8 @@
 require 'uri'
 
 class Url < ApplicationRecord
+  has_many :clicks
+
   # scope :latest, -> {}
   validates_format_of :original_url, with: URI.regexp
   validates_length_of :short_url, {is: 5}

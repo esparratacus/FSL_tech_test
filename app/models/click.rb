@@ -2,4 +2,7 @@
 
 class Click < ApplicationRecord
   belongs_to :url
+
+  validates_presence_of :platform, :browser
+  validates_associated :url
 end
