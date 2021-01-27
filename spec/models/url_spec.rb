@@ -25,14 +25,6 @@ RSpec.describe Url, type: :model do
       it 'validates that shor_url can have upper case and lower case characters and can have numbers' do
         expect(shortened_url.valid?).to be(true)
       end
-
-      it "validates that short_url can't have any special characters" do
-        expect(invalid_short_url.valid?).to be(false)
-      end
-
-      it 'validates the presence of a short_url when on creation' do
-        expect(no_short_url.valid?).to be(false)
-      end
     end
 
   end
